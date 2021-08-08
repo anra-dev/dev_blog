@@ -53,15 +53,15 @@
 
             <ul class="navbar-nav flex-column text-start">
                 <li class="nav-item">
-                    {% url 'main-page' as main_page %}
-                    <a class="nav-link {% active request main_page %}" href="{{ main_page }}"><i class="fas fa-home fa-fw me-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+                    {% url 'ex_post_list' as post_list %}
+                    <a class="nav-link {% active request main_page %}" href="{{ post_list }}"><i class="fas fa-home fa-fw me-2"></i>Blog Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    {% url 'blog-post' as blog_post %}
-                    <a class="nav-link {% active request blog_post %}" href="{{ blog_post }}"><i class="fas fa-bookmark fa-fw me-2"></i>Blog Post</a>
+                    {% url 'ex_post_detail' as post_detail %}
+                    <a class="nav-link {% active request post_detail %}" href="{{ post_detail }}"><i class="fas fa-bookmark fa-fw me-2"></i>Blog Post</a>
                 </li>
                 <li class="nav-item">
-                    {% url 'about' as about %}
+                    {% url 'ex_about' as about %}
                     <a class="nav-link {% active request about %}" href="{{ about }}"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
                 </li>
             </ul>

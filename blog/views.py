@@ -3,12 +3,16 @@ from django.views.generic import TemplateView
 
 
 class PostListView(TemplateView):
-    template_name = 'main_app/post_list.html'
+    template_name = 'blog/post_list.html'
 
 
 class PostDetailView(TemplateView):
-    template_name = 'main_app/post_detail.html'
+    template_name = 'blog/post_detail.html'
 
 
 class AboutView(TemplateView):
-    template_name = 'main_app/about.html'
+    template_name = 'about.html'
+
+
+class HomeView(TemplateView):
+    template_name = 'home.html'
