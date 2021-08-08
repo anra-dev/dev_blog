@@ -37,8 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'ckeditor',
+    'ckeditor_uploader',
+
     'main_app.apps.MainAppConfig',
-    'blog.apps.BlogConfig'
+    'posts.apps.PostsConfig',
+    'comments.apps.CommentsConfig'
 ]
 
 MIDDLEWARE = [
@@ -106,9 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -129,3 +134,22 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# django-ckeditor settings
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'width': 850,
+        'height': 350,
+        'filebrowserWindowWidth': 975,
+        'filebrowserWindowHeight': 550,
+    },
+    'small': {
+        'width': 850,
+        'height': 200,
+        'filebrowserWindowWidth': 975,
+        'filebrowserWindowHeight': 550,
+    },
+}

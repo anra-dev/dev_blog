@@ -21,6 +21,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blog.urls')),
+    path('', include('posts.urls')),
     path('ex/', include('main_app.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
