@@ -1,0 +1,7 @@
+{% block breadcrumb-wrapper %}
+    <ul class="breadcrumb container">
+        {% block breadcrumbs %}
+            <li><a href="{% url 'home' %}">Home</a></li>
+        {% endblock %}
+    </ul>
+{% endblock %}

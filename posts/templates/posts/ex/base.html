@@ -1,12 +1,6 @@
 {%  extends 'base.html' %}
 
-{% block breadcrumbs %}
-  {{ block.super }}
-  <li class="active">Posts</li>
-{% endblock %}
-
 {% block content %}
-
 
     <div class="row">
         <div class="col-9">
@@ -17,7 +11,7 @@
 
         <div class="col-1">
             <!-- Right sidebar -->
-            {% include 'posts/includes/_sidebar_right.html' %}
+            {% include 'posts/ex/_sidebar_right.html' %}
             <!-- Right sidebar -->
         </div>
     </div>

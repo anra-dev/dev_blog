@@ -1,69 +1,84 @@
-html,
 body {
-  height: 100%;
+    padding-bottom: 120px;
 }
 
-form {
-  margin-top: 20px;
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 114px;
 }
 
-footer {
-  margin: 40px 0 20px;
-}
+
+
+
+/*html,*/
+/*body {*/
+/*  height: 100%;*/
+/*}*/
+
+/*form {*/
+/*  margin-top: 20px;*/
+/*}*/
+
+/*footer {*/
+/*  margin: 40px 0 20px;*/
+/*}*/
 
 /* bootstrap */
 .breadcrumb {
-  margin-top: -21px;
-  margin-bottom: 10px;
+  margin-top: -15px;
+  margin-bottom: 5px;
   background-color: #fff;
   border: 0;
   border-radius: 0;
 }
 
-.alert {
-  margin-bottom: 0;
-}
+/*.alert {*/
+/*  margin-bottom: 0;*/
+/*}*/
 
-.help-block {
-  margin-bottom: 0;
-}
+/*.help-block {*/
+/*  margin-bottom: 0;*/
+/*}*/
 
-.pagination {
-  margin-top: 10px;
-}
+/*.pagination {*/
+/*  margin-top: 10px;*/
+/*}*/
 
-/* general */
-.portlet {
-  margin-bottom: 20px;
-  padding: 10px 0 10px 15px;
-  border-left: solid 5px #ccc;
-}
-.portlet:first-child {
-  margin-top: 20px;
-}
-  .portlet > h3 {
-    margin: 0 0 20px;
-  }
-  .portlet > ul {
-    margin: 0 0 0 20px;
-    padding: 0;
-  }
+/*!* general *!*/
+/*.portlet {*/
+/*  margin-bottom: 20px;*/
+/*  padding: 10px 0 10px 15px;*/
+/*  border-left: solid 5px #ccc;*/
+/*}*/
+/*.portlet:first-child {*/
+/*  margin-top: 20px;*/
+/*}*/
+/*  .portlet > h3 {*/
+/*    margin: 0 0 20px;*/
+/*  }*/
+/*  .portlet > ul {*/
+/*    margin: 0 0 0 20px;*/
+/*    padding: 0;*/
+/*  }*/
 
-@media (max-width: 991px) {
-  .portlet:first-child {
-    display: inline-block;
-  }
-}
+/*@media (max-width: 991px) {*/
+/*  .portlet:first-child {*/
+/*    display: inline-block;*/
+/*  }*/
+/*}*/
 
-/* flatpages */
-.flatpages {
-  margin-bottom: 20px;
-}
+/*!* flatpages *!*/
+/*.flatpages {*/
+/*  margin-bottom: 20px;*/
+/*}*/
 
-/* contact */
-.contact {
-  margin-bottom: 20px;
-}
+/*!* contact *!*/
+/*.contact {*/
+/*  margin-bottom: 20px;*/
+/*}*/
 
 /* blog */
 .blog > .post {

@@ -1,3 +1,5 @@
+{% load active_link_tag %}
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-xxl">
         <a class="navbar-brand" href="{% url 'home' %}">Придумать название блога</a>
@@ -7,15 +9,18 @@
         <div class="collapse navbar-collapse" id="navbar-main-collapse">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'home' %}">Home
+                    {% url 'home' as home %}
+                    <a class="nav-link {% active request home %}" href="{{ home }}">Home
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'post_list' %}">Posts</a>
+                    {% url 'post_list' as post_list %}
+                    <a class="nav-link {% active request post_list %}" href="{{ post_list }}">Posts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                    {% url 'about' as about %}
+                    <a class="nav-link {% active request about %}" href="{{ about }}">About</a>
                 </li>
             </ul>
             <form class="d-flex my-auto">

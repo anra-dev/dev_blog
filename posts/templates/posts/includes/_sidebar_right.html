@@ -1,24 +1,19 @@
 <div class="portlet">
     <h3>Browse</h3>
-
     <ul>
-        <li><a href="#">Archive</a></li>
+        <li><a href="{% url 'post_archive' %}">Archive</a></li>
     </ul>
 </div>
 
-{# {% if post_tags %} #}
-<div class="portlet">
-    <h3>Tags</h3>
 
-    <ul>
-        <li><a href="#">Python</a></li>
-        <li><a href="#">Django</a></li>
-        <li><a href="#">Git</a></li>
-        {% comment %}
-                    {% for post_tag in post_tags %}
-                        <li><a href="{% url 'blog:post-list-by-tag' post_tag.slug %}">{{ post_tag.name }}</a></li>
-                    {% endfor %}
-                    {% endcomment %}
-    </ul>
-</div>
-{# {% endif %} #}
+{% if post_tags %}
+    <div class="portlet">
+        <h3>Tags</h3>
+        <ul>
+            {% for post_tag in post_tags %}
+                <li><a href="{% url 'post_list_by_tag' post_tag.slug %}">{{ post_tag.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+

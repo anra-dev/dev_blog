@@ -29,11 +29,11 @@ class PostAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.author = request.user
-        if (obj.published_date is None
+        if (obj.published_at is None
                 and obj.status in [Post.STATUS_PUBLISHED, Post.STATUS_ARCHIVED]):
-            obj.published_date = timezone.now()
+            obj.published_at = timezone.now()
         if change:
-            obj.updated_date = timezone.now()
+            obj.updated_at = timezone.now()
         super(PostAdmin, self).save_model(request, obj, form, change)
 
 

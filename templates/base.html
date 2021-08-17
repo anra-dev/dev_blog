@@ -24,7 +24,9 @@
 
 <!-- Main content -->
 <div class="container-xxl">
-    <div class="row">
+
+    {% include 'includes/_alerts.html' %}
+    <div class="row mb-3">
         <!-- Left sidebar -->
         <div class="col-2">
             {% include 'includes/_sidebar_left.html' %}
@@ -32,7 +34,10 @@
         <!-- Left sidebar -->
 
         <!-- Content-->
-        <div class="col-10 px-2 my-3">
+        <div class="blog col-10 px-2 my-3">
+            <!-- Breadcrumbs -->
+            {% include 'includes/_breadcrumbs.html' %}
+            <!-- Breadcrumbs -->
             {% block content %}
                 <!-- Content data-->
             {% endblock content %}
