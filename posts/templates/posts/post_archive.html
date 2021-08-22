@@ -1,6 +1,12 @@
 {% extends 'posts/base.html' %}
 
-{% block content %}
+{% block breadcrumbs %}
+  {{ block.super }}
+  <li class="breadcrumb-item"><a href="{% url 'post_list' %}">Posts</a></li>
+  <li class="breadcrumb-item active">Archive</li>
+{% endblock %}
+
+{% block blog_content %}
   <div class="post-archive">
     <h1>Archive</h1>
 
@@ -22,4 +28,4 @@
       <p>No posts yet.</p>
     {% endfor %}
   </div>
-{% endblock content %}
+{% endblock blog_content %}

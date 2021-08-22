@@ -3,12 +3,14 @@
 
 {% block breadcrumbs %}
   {{ block.super }}
-  <li class="breadcrumb-item active">Posts</li>
+  <li class="breadcrumb-item"><a href="{% url 'post_list' %}">Posts</a></li>
+  <li class="breadcrumb-item">Tags</li>
+  <li class="breadcrumb-item active">{{ tag.name }}</li>
 {% endblock %}
 
 {% block blog_content %}
     <section class="blog-list px-3 py-3 p-md-3">
-        <div class="container">
+        <div class="container single-col-max-width">
             {% for post in posts %}
                 <div class="item mb-5">
                     <div class="row g-3 g-xl-0">

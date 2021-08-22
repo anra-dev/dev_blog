@@ -18,7 +18,7 @@ class PostDetailView(DetailView):
 class PostListByTagView(ListView):
     context_object_name = 'posts'
     allow_empty = False
-    #template_name_suffix = '_list_by_tag'
+    template_name_suffix = '_list_by_tag'
 
     def get_queryset(self):
         return Post.objects.active().filter(tags__slug=self.kwargs['slug'])

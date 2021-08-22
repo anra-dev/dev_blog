@@ -1,10 +1,29 @@
 {% extends 'posts/base.html' %}
 {% load static %}
+
+{% block breadcrumbs %}
+  {{ block.super }}
+  <li class="breadcrumb-item"><a href="{% url 'post_list' %}">Posts</a></li>
+  <li class="breadcrumb-item active">{{ post.title }}</li>
+{% endblock %}
+
 {% block blog_content %}
+  <div class="post">
+    <h1>{{ post.title }}</h1>
 
-    <div class="mx-2 my-2 pb-3">
-
-        {{ post.body|safe }}
-
+    <div class="date">
+      <span class="glyphicon glyphicon-time"></span>
+      {{ post.published_at|date:"F j, Y" }}
     </div>
+
+    {{ post.body|safe }}
+
+    {% if post.tags.all %}
+      <div class="tags">
+        {% for tag in post.tags.all %}
+          <a href="{% url 'post_list_by_tag' tag.slug %}" class="btn btn-light btn-sm">{{ tag.name }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
 {% endblock blog_content %}
